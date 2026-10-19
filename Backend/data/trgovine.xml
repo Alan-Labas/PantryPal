@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<trgovine>
+    <trgovina id="t-1">
+        <ime>Mercator</ime>
+        <kraj>Ljubljana</kraj>
+        <opis>Trgovina v središču mesta</opis>
+    </trgovina>
+    <trgovina id="t-2">
+        <ime>Spar</ime>
+        <kraj>Maribor</kraj>
+        <opis>Trgovina v nakupovalnem centru</opis>
+    </trgovina>
+    <trgovina id="t-3">
+        <ime>Hofer</ime>
+        <kraj>Celje</kraj>
+        <opis>Trgovina v bližini doma</opis>
+    </trgovina>
+    <trgovina id="t-4">
+        <ime>Lidl</ime>
+        <kraj>Kranj</kraj>
+        <opis>Trgovina ob glavni cesti</opis>
+    </trgovina>
+    <trgovina id="t-5">
+        <ime>Eurospin</ime>
+        <kraj>Koper</kraj>
+        <opis></opis>
+    </trgovina>
+    <trgovina id="t-6">
+        <ime>Tuš</ime>
+        <kraj>Novo mesto</kraj>
+        <opis>Trgovina za tedenske nakupe</opis>
+    </trgovina>
+    <trgovina id="t-7">
+        <ime>E.Leclerc</ime>
+        <kraj>Ljubljana</kraj>
+        <opis>Večji nakupovalni center</opis>
+    </trgovina>
+    <trgovina id="t-8">
+        <ime>Mercator</ime>
+        <kraj>Ptuj</kraj>
+        <opis>Manjša poslovalnica</opis>
+    </trgovina>
+    <trgovina id="t-9">
+        <ime>Spar</ime>
+        <kraj>Velenje</kraj>
+        <opis>Trgovina v bližini službe</opis>
+    </trgovina>
+    <trgovina id="t-10">
+        <ime>Lidl</ime>
+        <kraj>Murska Sobota</kraj>
+        <opis>Trgovina za občasne nakupe</opis>
+    </trgovina>
+</trgovine>

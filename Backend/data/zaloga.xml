@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<zaloga>
+    <zapis id="z-1" ziviloId="H-1" trgovinaId="t-1">
+        <kolicina>2</kolicina>
+        <datumNakupa>2026-10-19</datumNakupa>
+        <rokUporabe>2026-10-25</rokUporabe>
+    </zapis>
+    <zapis id="z-2" ziviloId="H-2" trgovinaId="t-2">
+        <kolicina>4</kolicina>
+        <datumNakupa>2026-10-18</datumNakupa>
+        <rokUporabe>2026-10-23</rokUporabe>
+    </zapis>
+    <zapis id="z-3" ziviloId="H-3" trgovinaId="t-3">
+        <kolicina>300</kolicina>
+        <datumNakupa>2026-10-17</datumNakupa>
+        <rokUporabe>2026-11-05</rokUporabe>
+    </zapis>
+    <zapis id="z-4" ziviloId="H-4" trgovinaId="t-4">
+        <kolicina>10</kolicina>
+        <datumNakupa>2026-10-16</datumNakupa>
+        <rokUporabe>2026-10-30</rokUporabe>
+    </zapis>
+    <zapis id="z-5" ziviloId="H-5" trgovinaId="t-5">
+        <kolicina>1000</kolicina>
+        <datumNakupa>2026-10-10</datumNakupa>
+        <rokUporabe>2027-10-10</rokUporabe>
+    </zapis>
+    <zapis id="z-6" ziviloId="H-6" trgovinaId="t-6">
+        <kolicina>500</kolicina>
+        <datumNakupa>2026-10-12</datumNakupa>
+        <rokUporabe>2027-06-12</rokUporabe>
+    </zapis>
+    <zapis id="z-7" ziviloId="H-7" trgovinaId="t-7">
+        <kolicina>1000</kolicina>
+        <datumNakupa>2026-10-13</datumNakupa>
+        <rokUporabe>2027-04-13</rokUporabe>
+    </zapis>
+    <zapis id="z-8" ziviloId="H-8" trgovinaId="t-8">
+        <kolicina>250</kolicina>
+        <datumNakupa>2026-10-14</datumNakupa>
+        <rokUporabe>2027-02-14</rokUporabe>
+    </zapis>
+    <zapis id="z-9" ziviloId="H-9" trgovinaId="t-9">
+        <kolicina>6</kolicina>
+        <datumNakupa>2026-10-18</datumNakupa>
+        <rokUporabe>2026-10-28</rokUporabe>
+    </zapis>
+    <zapis id="z-10" ziviloId="H-10" trgovinaId="t-10">
+        <kolicina>5</kolicina>
+        <datumNakupa>2026-10-19</datumNakupa>
+        <rokUporabe>2026-10-24</rokUporabe>
+    </zapis>
+    <zapis id="z-11" ziviloId="H-11" trgovinaId="t-2">
+        <kolicina>2000</kolicina>
+        <datumNakupa>2026-10-15</datumNakupa>
+        <rokUporabe>2026-11-15</rokUporabe>
+    </zapis>
+    <zapis id="z-12" ziviloId="H-12" trgovinaId="t-4">
+        <kolicina>500</kolicina>
+        <datumNakupa>2026-10-18</datumNakupa>
+        <rokUporabe>2026-10-29</rokUporabe>
+    </zapis>
+    <zapis id="z-13" ziviloId="H-13" trgovinaId="t-5">
+        <kolicina>750</kolicina>
+        <datumNakupa>2026-10-11</datumNakupa>
+        <rokUporabe>2027-08-11</rokUporabe>
+    </zapis>
+    <zapis id="z-14" ziviloId="H-14" trgovinaId="t-10">
+        <kolicina>500</kolicina>
+        <datumNakupa>2026-10-09</datumNakupa>
+        <rokUporabe></rokUporabe>
+    </zapis>
+    <zapis id="z-15" ziviloId="H-15" trgovinaId="t-3">
+        <kolicina>160</kolicina>
+        <datumNakupa>2026-10-16</datumNakupa>
+        <rokUporabe>2028-10-16</rokUporabe>
+    </zapis>
+</zaloga>

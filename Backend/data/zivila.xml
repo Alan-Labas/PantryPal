@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<zivila>
+    <zivilo id="H-1">
+        <ime>Mleko</ime>
+        <kategorija>Mlečni izdelek</kategorija>
+        <enota>l</enota>
+        <opis>Polnomastno mleko</opis>
+    </zivilo>
+    <zivilo id="H-2">
+        <ime>Jogurt</ime>
+        <kategorija>Mlečni izdelek</kategorija>
+        <enota>l</enota>
+        <opis>Grški jogurt</opis>
+    </zivilo>
+    <zivilo id="H-3">
+        <ime>Sir</ime>
+        <kategorija>Mlečni izdelek</kategorija>
+        <enota>g</enota>
+        <opis>poltrdi sir</opis>
+    </zivilo>
+    <zivilo id="H-4">
+        <ime>Jajca</ime>
+        <kategorija>Jajca</kategorija>
+        <enota>kos</enota>
+        <opis>Bio jajca</opis>
+    </zivilo>
+    <zivilo id="H-5">
+        <ime>Riž</ime>
+        <kategorija>Žita</kategorija>
+        <enota>g</enota>
+        <opis>Basmati riž</opis>
+    </zivilo>
+    <zivilo id="H-6">
+        <ime>Testenine</ime>
+        <kategorija>Žita</kategorija>
+        <enota>g</enota>
+        <opis>Pšenični peresniki</opis>
+    </zivilo>
+    <zivilo id="H-7">
+        <ime>Moka</ime>
+        <kategorija>Žita</kategorija>
+        <enota>g</enota>
+        <opis>Bela pšenična moka</opis>
+    </zivilo>
+    <zivilo id="H-8">
+        <ime>Ovseni kosmiči</ime>
+        <kategorija>Žita</kategorija>
+        <enota>g</enota>
+        <opis>Drobni ovseni kosmiči</opis>
+    </zivilo>
+    <zivilo id="H-9">
+        <ime>Jabolko</ime>
+        <kategorija>Sadje</kategorija>
+        <enota>kos</enota>
+        <opis>Sveža jabolka</opis>
+    </zivilo>
+    <zivilo id="H-10">
+        <ime>Banane</ime>
+        <kategorija>Sadje</kategorija>
+        <enota>kos</enota>
+        <opis>Sveže banane</opis>
+    </zivilo>
+    <zivilo id="H-11">
+        <ime>Krompir</ime>
+        <kategorija>Zelenjava</kategorija>
+        <enota>g</enota>
+        <opis>Krompir za pečenje</opis>
+    </zivilo>
+    <zivilo id="H-12">
+        <ime>Korenje</ime>
+        <kategorija>Zelenjava</kategorija>
+        <enota>g</enota>
+        <opis>Sveže korenje</opis>
+    </zivilo>
+    <zivilo id="H-13">
+        <ime>Fižol</ime>
+        <kategorija>Stročnice</kategorija>
+        <enota>g</enota>
+        <opis>Suhi rjavi fižol</opis>
+    </zivilo>
+    <zivilo id="H-14">
+        <ime>Oljčno olje</ime>
+        <kategorija>Olja</kategorija>
+        <enota>ml</enota>
+        <opis>Ekstra deviško oljčno olje</opis>
+    </zivilo>
+    <zivilo id="H-15">
+        <ime>Tuna</ime>
+        <kategorija>Ribe</kategorija>
+        <enota>g</enota>
+        <opis>Tuna v konzervi</opis>
+    </zivilo>
+</zivila>
