@@ -1,0 +1,34 @@
+[ {
+  "id" : "z-1",
+  "ziviloId" : "H-1",
+  "imeZivila" : "Mleko",
+  "kolicina" : 2.0,
+  "enota" : "l",
+  "trgovinaId" : "t-1",
+  "imeTrgovine" : "Mercator",
+  "kraj" : "Ljubljana",
+  "datumNakupa" : "2026-10-19",
+  "rokUporabe" : "2026-10-25"
+}, {
+  "id" : "z-2",
+  "ziviloId" : "H-2",
+  "imeZivila" : "Jogurt",
+  "kolicina" : 4.0,
+  "enota" : "l",
+  "trgovinaId" : "t-2",
+  "imeTrgovine" : "Spar",
+  "kraj" : "Maribor",
+  "datumNakupa" : "2026-10-18",
+  "rokUporabe" : "2026-10-23"
+}, {
+  "id" : "z-10",
+  "ziviloId" : "H-10",
+  "imeZivila" : "Banane",
+  "kolicina" : 5.0,
+  "enota" : "kos",
+  "trgovinaId" : "t-10",
+  "imeTrgovine" : "Lidl",
+  "kraj" : "Murska Sobota",
+  "datumNakupa" : "2026-10-19",
+  "rokUporabe" : "2026-10-24"
+} ]

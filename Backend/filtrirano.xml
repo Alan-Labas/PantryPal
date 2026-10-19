@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<zaloga>
+    <zapis id="z-1" trgovinaId="t-1" ziviloId="H-1">
+        <imeZivila>Mleko</imeZivila>
+        <kolicina>2.0</kolicina>
+        <enota>l</enota>
+        <imeTrgovine>Mercator</imeTrgovine>
+        <kraj>Ljubljana</kraj>
+        <datumNakupa>2026-10-19</datumNakupa>
+        <rokUporabe>2026-10-25</rokUporabe>
+    </zapis>
+    <zapis id="z-2" trgovinaId="t-2" ziviloId="H-2">
+        <imeZivila>Jogurt</imeZivila>
+        <kolicina>4.0</kolicina>
+        <enota>l</enota>
+        <imeTrgovine>Spar</imeTrgovine>
+        <kraj>Maribor</kraj>
+        <datumNakupa>2026-10-18</datumNakupa>
+        <rokUporabe>2026-10-23</rokUporabe>
+    </zapis>
+    <zapis id="z-10" trgovinaId="t-10" ziviloId="H-10">
+        <imeZivila>Banane</imeZivila>
+        <kolicina>5.0</kolicina>
+        <enota>kos</enota>
+        <imeTrgovine>Lidl</imeTrgovine>
+        <kraj>Murska Sobota</kraj>
+        <datumNakupa>2026-10-19</datumNakupa>
+        <rokUporabe>2026-10-24</rokUporabe>
+    </zapis>
+</zaloga>
