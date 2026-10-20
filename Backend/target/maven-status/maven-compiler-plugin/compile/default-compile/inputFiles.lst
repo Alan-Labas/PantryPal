@@ -1,7 +1,10 @@
 /Users/alanlabas/Faks_3.Letnik/TIDS/Vaje/PantryPal/Backend/src/main/java/com/example/PantryPal/PantryPalApplication.java
 /Users/alanlabas/Faks_3.Letnik/TIDS/Vaje/PantryPal/Backend/src/main/java/com/example/PantryPal/service/FilterService.java
 /Users/alanlabas/Faks_3.Letnik/TIDS/Vaje/PantryPal/Backend/src/main/java/com/example/PantryPal/service/IzvozService.java
+/Users/alanlabas/Faks_3.Letnik/TIDS/Vaje/PantryPal/Backend/src/main/java/com/example/PantryPal/service/KonzolaService.java
+/Users/alanlabas/Faks_3.Letnik/TIDS/Vaje/PantryPal/Backend/src/main/java/com/example/PantryPal/service/ReceptParserService.java
 /Users/alanlabas/Faks_3.Letnik/TIDS/Vaje/PantryPal/Backend/src/main/java/com/example/PantryPal/service/XmlService.java
+/Users/alanlabas/Faks_3.Letnik/TIDS/Vaje/PantryPal/Backend/src/main/java/com/example/PantryPal/vao/Recept.java
 /Users/alanlabas/Faks_3.Letnik/TIDS/Vaje/PantryPal/Backend/src/main/java/com/example/PantryPal/vao/Trgovina.java
 /Users/alanlabas/Faks_3.Letnik/TIDS/Vaje/PantryPal/Backend/src/main/java/com/example/PantryPal/vao/Zaloga.java
 /Users/alanlabas/Faks_3.Letnik/TIDS/Vaje/PantryPal/Backend/src/main/java/com/example/PantryPal/vao/Zivilo.java

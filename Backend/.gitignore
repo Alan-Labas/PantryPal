@@ -1,0 +1,7 @@
+# Lokalno zajeti podatki za nalogo 2
+data/recepti/
+
+# Gradnja in nastavitve IDE
+target/
+.idea/
+.DS_Store

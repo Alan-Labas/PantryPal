@@ -31,30 +31,36 @@ mvn spring-boot:run
 
 ## Primeri uporabe
 
-Po zagonu izberite možnost v konzolnem meniju:
+Po zagonu se odpre glavni meni:
+
+- `1` – domača zaloga in filtriranje (naloga 1).
+- `2` – lokalni recepti in spletni parser (naloga 2).
+- `0` – izhod.
+
+V podmeniju naloge 1 izberite:
 
 - `1` – prikaz celotne zaloge.
 - `2` – filtriranje po roku uporabe.
 - `3` – filtriranje po trgovini nakupa.
 - `4` – filtriranje po živilu.
-- `0` – izhod.
+- `0` – vrnitev v glavni meni.
 
 ### Filter po datumu
 
-Izberite `2` in vnesite `2026-10-25`.
+V glavnem meniju izberite `1`, nato `2` in vnesite `2026-10-25`.
 
 Program prikaže mleko, jogurt in banane, ker njihov rok uporabe
 poteče do vključno izbranega datuma.
 
 ### Filter po trgovini
 
-Izberite `3` in vnesite `t-1`.
+V glavnem meniju izberite `1`, nato `3` in vnesite `t-1`.
 
 Program prikaže zalogo, kupljeno v poslovalnici Mercator Ljubljana.
 
 ### Filter po živilu
 
-Izberite `4` in vnesite `H-1`.
+V glavnem meniju izberite `1`, nato `4` in vnesite `H-1`.
 
 Program prikaže zapise zaloge za mleko.
 
@@ -66,4 +72,16 @@ Obstoječi datoteki se prepišeta.
 
 Ob napačnem uporabniškem vnosu program prikaže opozorilo
 in ponovno odpre meni. Če vhodnih XML podatkov ni mogoče
-pravilno naložiti ali povezati, se nadzorovano zaključi.
+pravilno naložiti ali povezati, se vrne v glavni meni.
+
+## Naloga 2 – Parser receptov
+
+Navodila za samodejni zajem receptov, zagon in teste so v
+[README_NALOGA2.md](README_NALOGA2.md).
+
+```bash
+cd Backend
+mvn spring-boot:run -Dspring-boot.run.arguments="--parser --stevilo=100"
+```
+
+Zajeta zbirka je namenjena lokalni študijski uporabi in je izključena iz Gita.
