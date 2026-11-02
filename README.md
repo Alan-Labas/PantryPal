@@ -85,3 +85,20 @@ mvn spring-boot:run -Dspring-boot.run.arguments="--parser --stevilo=100"
 ```
 
 Zajeta zbirka je namenjena lokalni študijski uporabi in je izključena iz Gita.
+
+
+## Naloga 3 – Odprti podatki in grafi v konzoli
+
+V glavnem meniju izberite `3` za podatke o odpadni hrani v Sloveniji iz
+uradne PC-Axis zbirke SURS/OPSI. Ob nalaganju se podatki dinamično pridobijo.
+Na voljo so filtri, statistični povzetki, konzolni grafi, prava grafa PNG in izvoz JSON.
+
+Vse tri naloge zaženete enako:
+
+```bash
+cd Backend
+mvn spring-boot:run
+```
+
+Frontend ali spletni strežnik nista potrebna. Navodila:
+[README_NALOGA3.md](README_NALOGA3.md).

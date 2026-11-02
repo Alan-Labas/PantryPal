@@ -1,5 +1,6 @@
 package com.example.PantryPal.service;
 
+import com.example.PantryPal.odprtipodatki.OdprtiPodatkiKonzola;
 import com.example.PantryPal.vao.Trgovina;
 import com.example.PantryPal.vao.Zaloga;
 import com.example.PantryPal.vao.Zivilo;
@@ -16,13 +17,15 @@ import java.util.*;
 
 @Service
 public class KonzolaService {
+    private final OdprtiPodatkiKonzola odprtiPodatki;
     private final XmlService xmlService;
     private final IzvozService izvozService;
     private final FilterService filterService;
     private final ReceptParserService receptParserService;
 
     public KonzolaService(XmlService xmlService, IzvozService izvozService,
-                          FilterService filterService, ReceptParserService receptParserService) {
+                          FilterService filterService, ReceptParserService receptParserService, OdprtiPodatkiKonzola odprtiPodatki) {
+        this.odprtiPodatki = odprtiPodatki;
         this.xmlService = xmlService;
         this.izvozService = izvozService;
         this.filterService = filterService;
@@ -36,6 +39,7 @@ public class KonzolaService {
                     === PantryPal ===
                     1 – Domača zaloga in filtriranje (naloga 1)
                     2 – Recepti in spletni parser (naloga 2)
+                    3 – Odprti podatki in grafi (naloga 3)
                     0 – Izhod
                     """);
             System.out.print("Izberi možnost: ");
@@ -43,11 +47,12 @@ public class KonzolaService {
             switch (sc.nextLine().trim()) {
                 case "1" -> zalogaMeni(sc);
                 case "2" -> receptiMeni(sc);
+                case "3" -> odprtiPodatki.zagon(sc);
                 case "0" -> {
                     System.out.println("Nasvidenje!");
                     return;
                 }
-                default -> System.out.println("Neveljavna izbira. Izberi 0, 1 ali 2.");
+                default -> System.out.println("Neveljavna izbira. Izberi 0, 1, 2 ali 3.");
             }
         }
     }

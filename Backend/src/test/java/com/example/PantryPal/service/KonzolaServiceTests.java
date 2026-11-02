@@ -38,7 +38,7 @@ class KonzolaServiceTests {
     void filtriOstanejoDostopniInPrehodMedNalogamaDeluje() {
         var izvoz = new IzvozPreverjanje();
         var konzola = new KonzolaService(new XmlService(), izvoz,
-                new FilterService(), new ReceptParserService());
+                new FilterService(), new ReceptParserService(), null);
         String izpis = izvedi(konzola,
                 "abc\n1\n2\nnapacen\n2\n2026-10-25\n3\nt-1\n4\nH-1\n0\n2\n0\n0\n");
         assertEquals(List.of(3,1,1), izvoz.jsonVelikosti);
@@ -57,7 +57,7 @@ class KonzolaServiceTests {
             }
         };
         var izvoz = new IzvozPreverjanje();
-        var konzola = new KonzolaService(new XmlService(), izvoz, new FilterService(), parser);
+        var konzola = new KonzolaService(new XmlService(), izvoz, new FilterService(), parser, null);
         String izpis = izvedi(konzola,
                 "2\n2\nabc\n2\n501\n2\n5\nDA\n0\n1\n1\n0\n0\n");
         assertTrue(izpis.contains("Vnesi celo število od 1 do 500"));
