@@ -1,9 +1,17 @@
 /Users/alanlabas/Faks_3.Letnik/TIDS/Vaje/PantryPal/Backend/src/main/java/com/example/PantryPal/PantryPalApplication.java
+/Users/alanlabas/Faks_3.Letnik/TIDS/Vaje/PantryPal/Backend/src/main/java/com/example/PantryPal/llm/GeminiService.java
+/Users/alanlabas/Faks_3.Letnik/TIDS/Vaje/PantryPal/Backend/src/main/java/com/example/PantryPal/llm/LlmKonzola.java
+/Users/alanlabas/Faks_3.Letnik/TIDS/Vaje/PantryPal/Backend/src/main/java/com/example/PantryPal/odprtipodatki/GrafService.java
+/Users/alanlabas/Faks_3.Letnik/TIDS/Vaje/PantryPal/Backend/src/main/java/com/example/PantryPal/odprtipodatki/OdpadnaHranaService.java
+/Users/alanlabas/Faks_3.Letnik/TIDS/Vaje/PantryPal/Backend/src/main/java/com/example/PantryPal/odprtipodatki/OdprtiPodatkiKonzola.java
+/Users/alanlabas/Faks_3.Letnik/TIDS/Vaje/PantryPal/Backend/src/main/java/com/example/PantryPal/odprtipodatki/PxParser.java
 /Users/alanlabas/Faks_3.Letnik/TIDS/Vaje/PantryPal/Backend/src/main/java/com/example/PantryPal/service/FilterService.java
 /Users/alanlabas/Faks_3.Letnik/TIDS/Vaje/PantryPal/Backend/src/main/java/com/example/PantryPal/service/IzvozService.java
 /Users/alanlabas/Faks_3.Letnik/TIDS/Vaje/PantryPal/Backend/src/main/java/com/example/PantryPal/service/KonzolaService.java
+/Users/alanlabas/Faks_3.Letnik/TIDS/Vaje/PantryPal/Backend/src/main/java/com/example/PantryPal/service/PcAxisService.java
 /Users/alanlabas/Faks_3.Letnik/TIDS/Vaje/PantryPal/Backend/src/main/java/com/example/PantryPal/service/ReceptParserService.java
 /Users/alanlabas/Faks_3.Letnik/TIDS/Vaje/PantryPal/Backend/src/main/java/com/example/PantryPal/service/XmlService.java
+/Users/alanlabas/Faks_3.Letnik/TIDS/Vaje/PantryPal/Backend/src/main/java/com/example/PantryPal/vao/AiOdgovor.java
 /Users/alanlabas/Faks_3.Letnik/TIDS/Vaje/PantryPal/Backend/src/main/java/com/example/PantryPal/vao/Recept.java
 /Users/alanlabas/Faks_3.Letnik/TIDS/Vaje/PantryPal/Backend/src/main/java/com/example/PantryPal/vao/Trgovina.java
 /Users/alanlabas/Faks_3.Letnik/TIDS/Vaje/PantryPal/Backend/src/main/java/com/example/PantryPal/vao/Zaloga.java

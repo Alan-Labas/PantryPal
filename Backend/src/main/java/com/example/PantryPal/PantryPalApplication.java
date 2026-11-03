@@ -32,7 +32,9 @@ public class PantryPalApplication {
                 parser.zajemiRecepte(stevilo);
                 return;
             }
-            konzolaService.zagon(new Scanner(System.in));
+            Thread konzolaNit = new Thread(() -> konzolaService.zagon(new Scanner(System.in)), "pantrypal-konzola");
+            konzolaNit.setDaemon(true);
+            konzolaNit.start();
         };
     }
 }

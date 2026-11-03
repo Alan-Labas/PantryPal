@@ -41,7 +41,7 @@ class KonzolaServiceTests {
                 new FilterService(), new ReceptParserService(), null);
         String izpis = izvedi(konzola,
                 "abc\n1\n2\nnapacen\n2\n2026-10-25\n3\nt-1\n4\nH-1\n0\n2\n0\n0\n");
-        assertEquals(List.of(3,1,1), izvoz.jsonVelikosti);
+        assertEquals(List.of(12,1,1), izvoz.jsonVelikosti);
         assertEquals(izvoz.jsonVelikosti, izvoz.xmlVelikosti);
         assertTrue(izpis.contains("Neveljaven datum"));
         assertTrue(izpis.contains("--- Recepti ---"));

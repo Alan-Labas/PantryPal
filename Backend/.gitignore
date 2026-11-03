@@ -5,3 +5,10 @@ data/recepti/
 target/
 .idea/
 .DS_Store
+
+# Začasni grafični izvozi naloge 3 in 4
+izhod/
+
+# Skrivni API ključi
+.env
+.env

@@ -21,6 +21,83 @@
   "datumNakupa" : "2026-10-18",
   "rokUporabe" : "2026-10-23"
 }, {
+  "id" : "z-3",
+  "ziviloId" : "H-3",
+  "imeZivila" : "Sir",
+  "kolicina" : 300.0,
+  "enota" : "g",
+  "trgovinaId" : "t-3",
+  "imeTrgovine" : "Hofer",
+  "kraj" : "Celje",
+  "datumNakupa" : "2026-10-17",
+  "rokUporabe" : "2026-11-05"
+}, {
+  "id" : "z-4",
+  "ziviloId" : "H-4",
+  "imeZivila" : "Jajca",
+  "kolicina" : 10.0,
+  "enota" : "kos",
+  "trgovinaId" : "t-4",
+  "imeTrgovine" : "Lidl",
+  "kraj" : "Kranj",
+  "datumNakupa" : "2026-10-16",
+  "rokUporabe" : "2026-10-30"
+}, {
+  "id" : "z-5",
+  "ziviloId" : "H-5",
+  "imeZivila" : "Riž",
+  "kolicina" : 1000.0,
+  "enota" : "g",
+  "trgovinaId" : "t-5",
+  "imeTrgovine" : "Eurospin",
+  "kraj" : "Koper",
+  "datumNakupa" : "2026-10-10",
+  "rokUporabe" : "2027-10-10"
+}, {
+  "id" : "z-6",
+  "ziviloId" : "H-6",
+  "imeZivila" : "Testenine",
+  "kolicina" : 500.0,
+  "enota" : "g",
+  "trgovinaId" : "t-6",
+  "imeTrgovine" : "Tuš",
+  "kraj" : "Novo mesto",
+  "datumNakupa" : "2026-10-12",
+  "rokUporabe" : "2027-06-12"
+}, {
+  "id" : "z-7",
+  "ziviloId" : "H-7",
+  "imeZivila" : "Moka",
+  "kolicina" : 1000.0,
+  "enota" : "g",
+  "trgovinaId" : "t-7",
+  "imeTrgovine" : "E.Leclerc",
+  "kraj" : "Ljubljana",
+  "datumNakupa" : "2026-10-13",
+  "rokUporabe" : "2027-04-13"
+}, {
+  "id" : "z-8",
+  "ziviloId" : "H-8",
+  "imeZivila" : "Ovseni kosmiči",
+  "kolicina" : 250.0,
+  "enota" : "g",
+  "trgovinaId" : "t-8",
+  "imeTrgovine" : "Mercator",
+  "kraj" : "Ptuj",
+  "datumNakupa" : "2026-10-14",
+  "rokUporabe" : "2027-02-14"
+}, {
+  "id" : "z-9",
+  "ziviloId" : "H-9",
+  "imeZivila" : "Jabolko",
+  "kolicina" : 6.0,
+  "enota" : "kos",
+  "trgovinaId" : "t-9",
+  "imeTrgovine" : "Spar",
+  "kraj" : "Velenje",
+  "datumNakupa" : "2026-10-18",
+  "rokUporabe" : "2026-10-28"
+}, {
   "id" : "z-10",
   "ziviloId" : "H-10",
   "imeZivila" : "Banane",
@@ -31,4 +108,59 @@
   "kraj" : "Murska Sobota",
   "datumNakupa" : "2026-10-19",
   "rokUporabe" : "2026-10-24"
+}, {
+  "id" : "z-11",
+  "ziviloId" : "H-11",
+  "imeZivila" : "Krompir",
+  "kolicina" : 2000.0,
+  "enota" : "g",
+  "trgovinaId" : "t-2",
+  "imeTrgovine" : "Spar",
+  "kraj" : "Maribor",
+  "datumNakupa" : "2026-10-15",
+  "rokUporabe" : "2026-11-15"
+}, {
+  "id" : "z-12",
+  "ziviloId" : "H-12",
+  "imeZivila" : "Korenje",
+  "kolicina" : 500.0,
+  "enota" : "g",
+  "trgovinaId" : "t-4",
+  "imeTrgovine" : "Lidl",
+  "kraj" : "Kranj",
+  "datumNakupa" : "2026-10-18",
+  "rokUporabe" : "2026-10-29"
+}, {
+  "id" : "z-13",
+  "ziviloId" : "H-13",
+  "imeZivila" : "Fižol",
+  "kolicina" : 750.0,
+  "enota" : "g",
+  "trgovinaId" : "t-5",
+  "imeTrgovine" : "Eurospin",
+  "kraj" : "Koper",
+  "datumNakupa" : "2026-10-11",
+  "rokUporabe" : "2027-08-11"
+}, {
+  "id" : "z-14",
+  "ziviloId" : "H-14",
+  "imeZivila" : "Oljčno olje",
+  "kolicina" : 500.0,
+  "enota" : "ml",
+  "trgovinaId" : "t-10",
+  "imeTrgovine" : "Lidl",
+  "kraj" : "Murska Sobota",
+  "datumNakupa" : "2026-10-09",
+  "rokUporabe" : null
+}, {
+  "id" : "z-15",
+  "ziviloId" : "H-15",
+  "imeZivila" : "Tuna",
+  "kolicina" : 160.0,
+  "enota" : "g",
+  "trgovinaId" : "t-3",
+  "imeTrgovine" : "Hofer",
+  "kraj" : "Celje",
+  "datumNakupa" : "2026-10-16",
+  "rokUporabe" : "2028-10-16"
 } ]

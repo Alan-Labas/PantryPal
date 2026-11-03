@@ -1,0 +1,85 @@
+CHARSET="ANSI";
+AXIS-VERSION="2013";
+CODEPAGE="windows-1250";
+LANGUAGE="sl";
+LANGUAGES="sl","en";
+CREATION-DATE="20181203 10:30";
+DECIMALS=11;
+SHOWDECIMALS=0;
+MATRIX="2780705S";
+SUBJECT-CODE="27";
+SUBJECT-AREA="Okolje - Environment";
+SUBJECT-AREA[en]="Okolje - Environment";
+COPYRIGHT=YES;
+DESCRIPTION="Nastajanje odpadne hrane po izvoru in ravnanje z njo (tone), Slovenija, letno";
+DESCRIPTION[en]="Food waste generation by source and treatment (tonnes), Slovenia, annually";
+TITLE="Nastajanje odpadne hrane po izvoru in ravnanje z njo (tone) po: MERITVE, LETO";
+TITLE[en]="Food waste generation by source and treatment (tonnes) by MEASURES and YEAR";
+CONTENTS="Nastajanje odpadne hrane po izvoru in ravnanje z njo (tone)";
+CONTENTS[en]="Food waste generation by source and treatment (tonnes)";
+UNITS="tone";
+UNITS[en]="tonnes";
+STUB="MERITVE";
+STUB[en]="MEASURES";
+HEADING="LETO";
+HEADING[en]="YEAR";
+VALUES("MERITVE")="Nastala odpadna hrana - SKUPAJ (tone)",
+"… nastala v proizvodnji hrane (vkljuèno s primarno) (tone)",
+"… nastala v distribuciji in trgovini z živili (tone)",
+"… nastala v gostinstvu in strežbi hrane (tone)","… nastala v gospodinjstvih (tone)",
+"Ravnanje z odpadno hrano - predelava v bioplinarnah (tone)",
+"Ravnanje z odpadno hrano - predelava v kompostarnah (tone)",
+"Ravnanje z odpadno hrano - biološka stabilizacija v okviru MBO (tone)",
+"Ravnanje z odpadno hrano - drugo ravnanje (tone)";
+VALUES[en]("MEASURES")="Food waste generated - TOTAL (tonnes)",
+"… in production activities (incl. primary) (tonnes)","… in distribution and food stores (tonnes)",
+"… in food services (tonnes)","… in households (tonnes)",
+"Food waste treatment - recovery in biogas plants (tonnes)",
+"Food waste treatment - recovery in composting systems (tonnes)",
+"Food waste treatment - biological stabilisation (tonnes)",
+"Food waste treatment - other treatment (tonnes)";
+VALUES("LETO")="2013","2014","2015","2016","2017","2018","2019","2020","2021","2022","2023","2024",
+"2025";
+VALUES[en]("YEAR")="2013","2014","2015","2016","2017","2018","2019","2020","2021","2022","2023",
+"2024","2025";
+TIMEVAL("LETO")=TLIST(A1),"2013","2014","2015","2016","2017","2018","2019","2020","2021","2022",
+"2023","2024","2025";
+TIMEVAL[en]("YEAR")=TLIST(A1),"2013","2014","2015","2016","2017","2018","2019","2020","2021","2022",
+"2023","2024","2025";
+CODES("MERITVE")="1","2","3","4","5","6","7","9","8";
+CODES[en]("MEASURES")="1","2","3","4","5","6","7","9","8";
+CODES("LETO")="2013","2014","2015","2016","2017","2018","2019","2020","2021","2022","2023","2024",
+"2025";
+CODES[en]("YEAR")="2013","2014","2015","2016","2017","2018","2019","2020","2021","2022","2023",
+"2024","2025";
+LAST-UPDATED="20260929 10:30";
+CONTACT="Statistièni urad RS, T: (01) 241 64 04, E: gp.surs@gov.si";
+CONTACT[en]="Statistical Office of the Republic of Slovenia, T: +386 1 241 64 04, E: gp.surs@gov.si";
+DATABASE="SI-STAT";
+DATABASE[en]="SI-STAT";
+SOURCE="Statistièni urad Republike Slovenije";
+SOURCE[en]="Statistical Office of the Republic of Slovenia";
+NOTEX="Seštevki se zaradi zaokroževanja ne ujemajo.##Podatki o kolièini odpadne hrane za obdobje od leta 2020 naprej so revidirani. Revizija je bila opravljena na podlagi rezultatov sortirnih analiz mešanih komunalnih odpadkov, ki so jih izvedle pristojne "
+"institucije na podlagi Uredbe o obvezni obèinski gospodarski javni službi zbiranja komunalnih odpadkov. Rezultati so pokazali veèji delež odpadne hrane v mešanih komunalnih odpadkih, kot je bil upoštevan do zdaj, zato podatki niso popolnoma primerljivi s "
+"podatki do leta 2020.";
+NOTEX[en]="Because of rounding, the totals do not add up.##Data on the amount of food waste have been revised for the period from 2020 on. The revision was carried out based on the results of sorting analyses of mixed municipal waste, which were carried "
+"out by the competent institutions on the basis of the Decree on the mandatory municipal public utility service of municipal waste collection. The results showed a higher share of food waste among mixed municipal waste than it had been considered so far, "
+"so the data are not fully comparable with the data until 2020.";
+NOTE="Povezane vsebine:#- <A class=seznam HREF=https://www.stat.si/statweb/File/DocSysFile/10183>Metodološka pojasnila</A>#";
+NOTE[en]="Linked content:#- <A class=seznam HREF=https://www.stat.si/statweb/File/DocSysFile/10184 >Methodological explanations</A>#";
+DATASYMBOL1="N";
+DATASYMBOL1[en]="N";
+DATASYMBOL2="-";
+DATASYMBOL2[en]="-";
+DATASYMBOL4="z";
+DATASYMBOL4[en]="z";
+DATA=
+118450.3802962533 125102.161100982 133898.4070608621 137638.25485 131761.3670612829 139855.5727 140803.56005 154655.6865586002 154185.25665 150839.292787 164802.8005 168318.0664429 170947.4736821 
+7949.6329984345 9516.1822608544 10000.9195017505 10726.2795074413 10484.8049175938 10839.30342931505 12118.19906932426 10904.0820292 13560.82841850001 10645.369741 21824.77943 26037.2352938 25093.1341 
+9165.1263736579 9477.930364126 12932.9193638816 14491.8246599259 13114.7401912226 13763.48115454749 14447.33683762154 15263.548099 14424.48068299999 14069.93883 15004.58753 15170.979861 15490.2003862 
+38312.785814161 41347.5124160016 44823.56181523 43898.9185726328 40567.7432924665 42071.23134613747 44388.3297230542 50034.7359006 46568.40953860004 55839.33714249999 55955.91115 53524.5592419 54870.32520077129 
+63022.83511 64760.53606 66141.00638 68521.23211 67594.07866 73181.55677 69849.69442 78453.32052979998 79631.53800990003 70284.64707349997 72017.52236 73585.2920462 75493.81399512872 
+41616.1848828636 45116.0201802708 52418.1438280554 66335.8245842532 60082.8125370893 66254.9739368263 70123.12590024203 49600 48643 58460 67952.13699965096 75028.98886220584 76882.13616255936 
+38957.3403252713 42068.2807121103 45147.6737677992 39804.8084523549 39578.204138306 40877.50406127816 38614.04467513806 69834 71118 59152 55660.77856522789 56561.40944285671 57736.76164926328 
+10890.3475516304 26443.6647057383 28189.9809009603 29131.4063 28976.4874012829 29858.9699 28710.95004938438 33843 29864 32164 36653.72794886894 32719.10155584347 31715.21746982684 
+26986.507536488 11474.1955028625 8142.6085640472 2366.2155133919 3123.8629846047 2864.12480189554 3355.43942523553 1378.68655860017 4559.91664999997 1063.29278700016 4536.15696305219 4008.56613909398 4613.35840045054; 

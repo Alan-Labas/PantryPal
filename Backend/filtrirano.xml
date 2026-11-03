@@ -18,6 +18,69 @@
         <datumNakupa>2026-10-18</datumNakupa>
         <rokUporabe>2026-10-23</rokUporabe>
     </zapis>
+    <zapis id="z-3" trgovinaId="t-3" ziviloId="H-3">
+        <imeZivila>Sir</imeZivila>
+        <kolicina>300.0</kolicina>
+        <enota>g</enota>
+        <imeTrgovine>Hofer</imeTrgovine>
+        <kraj>Celje</kraj>
+        <datumNakupa>2026-10-17</datumNakupa>
+        <rokUporabe>2026-11-05</rokUporabe>
+    </zapis>
+    <zapis id="z-4" trgovinaId="t-4" ziviloId="H-4">
+        <imeZivila>Jajca</imeZivila>
+        <kolicina>10.0</kolicina>
+        <enota>kos</enota>
+        <imeTrgovine>Lidl</imeTrgovine>
+        <kraj>Kranj</kraj>
+        <datumNakupa>2026-10-16</datumNakupa>
+        <rokUporabe>2026-10-30</rokUporabe>
+    </zapis>
+    <zapis id="z-5" trgovinaId="t-5" ziviloId="H-5">
+        <imeZivila>Riž</imeZivila>
+        <kolicina>1000.0</kolicina>
+        <enota>g</enota>
+        <imeTrgovine>Eurospin</imeTrgovine>
+        <kraj>Koper</kraj>
+        <datumNakupa>2026-10-10</datumNakupa>
+        <rokUporabe>2027-10-10</rokUporabe>
+    </zapis>
+    <zapis id="z-6" trgovinaId="t-6" ziviloId="H-6">
+        <imeZivila>Testenine</imeZivila>
+        <kolicina>500.0</kolicina>
+        <enota>g</enota>
+        <imeTrgovine>Tuš</imeTrgovine>
+        <kraj>Novo mesto</kraj>
+        <datumNakupa>2026-10-12</datumNakupa>
+        <rokUporabe>2027-06-12</rokUporabe>
+    </zapis>
+    <zapis id="z-7" trgovinaId="t-7" ziviloId="H-7">
+        <imeZivila>Moka</imeZivila>
+        <kolicina>1000.0</kolicina>
+        <enota>g</enota>
+        <imeTrgovine>E.Leclerc</imeTrgovine>
+        <kraj>Ljubljana</kraj>
+        <datumNakupa>2026-10-13</datumNakupa>
+        <rokUporabe>2027-04-13</rokUporabe>
+    </zapis>
+    <zapis id="z-8" trgovinaId="t-8" ziviloId="H-8">
+        <imeZivila>Ovseni kosmiči</imeZivila>
+        <kolicina>250.0</kolicina>
+        <enota>g</enota>
+        <imeTrgovine>Mercator</imeTrgovine>
+        <kraj>Ptuj</kraj>
+        <datumNakupa>2026-10-14</datumNakupa>
+        <rokUporabe>2027-02-14</rokUporabe>
+    </zapis>
+    <zapis id="z-9" trgovinaId="t-9" ziviloId="H-9">
+        <imeZivila>Jabolko</imeZivila>
+        <kolicina>6.0</kolicina>
+        <enota>kos</enota>
+        <imeTrgovine>Spar</imeTrgovine>
+        <kraj>Velenje</kraj>
+        <datumNakupa>2026-10-18</datumNakupa>
+        <rokUporabe>2026-10-28</rokUporabe>
+    </zapis>
     <zapis id="z-10" trgovinaId="t-10" ziviloId="H-10">
         <imeZivila>Banane</imeZivila>
         <kolicina>5.0</kolicina>
@@ -26,5 +89,50 @@
         <kraj>Murska Sobota</kraj>
         <datumNakupa>2026-10-19</datumNakupa>
         <rokUporabe>2026-10-24</rokUporabe>
+    </zapis>
+    <zapis id="z-11" trgovinaId="t-2" ziviloId="H-11">
+        <imeZivila>Krompir</imeZivila>
+        <kolicina>2000.0</kolicina>
+        <enota>g</enota>
+        <imeTrgovine>Spar</imeTrgovine>
+        <kraj>Maribor</kraj>
+        <datumNakupa>2026-10-15</datumNakupa>
+        <rokUporabe>2026-11-15</rokUporabe>
+    </zapis>
+    <zapis id="z-12" trgovinaId="t-4" ziviloId="H-12">
+        <imeZivila>Korenje</imeZivila>
+        <kolicina>500.0</kolicina>
+        <enota>g</enota>
+        <imeTrgovine>Lidl</imeTrgovine>
+        <kraj>Kranj</kraj>
+        <datumNakupa>2026-10-18</datumNakupa>
+        <rokUporabe>2026-10-29</rokUporabe>
+    </zapis>
+    <zapis id="z-13" trgovinaId="t-5" ziviloId="H-13">
+        <imeZivila>Fižol</imeZivila>
+        <kolicina>750.0</kolicina>
+        <enota>g</enota>
+        <imeTrgovine>Eurospin</imeTrgovine>
+        <kraj>Koper</kraj>
+        <datumNakupa>2026-10-11</datumNakupa>
+        <rokUporabe>2027-08-11</rokUporabe>
+    </zapis>
+    <zapis id="z-14" trgovinaId="t-10" ziviloId="H-14">
+        <imeZivila>Oljčno olje</imeZivila>
+        <kolicina>500.0</kolicina>
+        <enota>ml</enota>
+        <imeTrgovine>Lidl</imeTrgovine>
+        <kraj>Murska Sobota</kraj>
+        <datumNakupa>2026-10-09</datumNakupa>
+        <rokUporabe/>
+    </zapis>
+    <zapis id="z-15" trgovinaId="t-3" ziviloId="H-15">
+        <imeZivila>Tuna</imeZivila>
+        <kolicina>160.0</kolicina>
+        <enota>g</enota>
+        <imeTrgovine>Hofer</imeTrgovine>
+        <kraj>Celje</kraj>
+        <datumNakupa>2026-10-16</datumNakupa>
+        <rokUporabe>2028-10-16</rokUporabe>
     </zapis>
 </zaloga>

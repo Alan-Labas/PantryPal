@@ -1,9 +1,11 @@
 package com.example.PantryPal.service;
 
+import com.example.PantryPal.llm.LlmKonzola;
 import com.example.PantryPal.odprtipodatki.OdprtiPodatkiKonzola;
 import com.example.PantryPal.vao.Trgovina;
 import com.example.PantryPal.vao.Zaloga;
 import com.example.PantryPal.vao.Zivilo;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import tools.jackson.databind.JsonNode;
 import tools.jackson.databind.json.JsonMapper;
@@ -18,6 +20,7 @@ import java.util.*;
 @Service
 public class KonzolaService {
     private final OdprtiPodatkiKonzola odprtiPodatki;
+    private final LlmKonzola llmKonzola;
     private final XmlService xmlService;
     private final IzvozService izvozService;
     private final FilterService filterService;
@@ -25,7 +28,15 @@ public class KonzolaService {
 
     public KonzolaService(XmlService xmlService, IzvozService izvozService,
                           FilterService filterService, ReceptParserService receptParserService, OdprtiPodatkiKonzola odprtiPodatki) {
+        this(xmlService, izvozService, filterService, receptParserService, odprtiPodatki, null);
+    }
+
+    @Autowired
+    public KonzolaService(XmlService xmlService, IzvozService izvozService,
+                          FilterService filterService, ReceptParserService receptParserService,
+                          OdprtiPodatkiKonzola odprtiPodatki, LlmKonzola llmKonzola) {
         this.odprtiPodatki = odprtiPodatki;
+        this.llmKonzola = llmKonzola;
         this.xmlService = xmlService;
         this.izvozService = izvozService;
         this.filterService = filterService;
@@ -40,6 +51,7 @@ public class KonzolaService {
                     1 – Domača zaloga in filtriranje (naloga 1)
                     2 – Recepti in spletni parser (naloga 2)
                     3 – Odprti podatki in grafi (naloga 3)
+                    4 – AI asistent za recepte in zalogo – Google Gemini (naloga 4)
                     0 – Izhod
                     """);
             System.out.print("Izberi možnost: ");
@@ -48,11 +60,14 @@ public class KonzolaService {
                 case "1" -> zalogaMeni(sc);
                 case "2" -> receptiMeni(sc);
                 case "3" -> odprtiPodatki.zagon(sc);
+                case "4" -> {
+                    if (llmKonzola != null) llmKonzola.zagon(sc);
+                }
                 case "0" -> {
                     System.out.println("Nasvidenje!");
                     return;
                 }
-                default -> System.out.println("Neveljavna izbira. Izberi 0, 1, 2 ali 3.");
+                default -> System.out.println("Neveljavna izbira. Izberi 0, 1, 2, 3 ali 4.");
             }
         }
     }

@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import 'tailwindcss';
+
+/* Dark mode is driven by data-theme on <html> (set by ThemeContext),
+   so the `dark:` variant must follow it instead of prefers-color-scheme. */
+@custom-variant dark (&:where([data-theme='dark'], [data-theme='dark'] *));
+
+/* ---------- Design tokens ---------- */
+:root {
+  --bg: #f6f7f9;
+  --surface: #ffffff;
+  --surface-hover: #f1f3f6;
+  --border: #e3e7ec;
+  --fg: #1c2430;
+  --muted: #5a6675;
+  --primary: #4a7dbd;
+  --primary-hover: #3d6aa3;
+  --primary-soft: #e8f0fa;
+  --success: #4f9d69;
+  --success-soft: #e9f4ed;
+  --danger: #c25e5e;
+  --danger-soft: #f9ecec;
+  color-scheme: light;
+}
+
+:root[data-theme='dark'] {
+  --bg: #15191f;
+  --surface: #1d232b;
+  --surface-hover: #242b35;
+  --border: #2e3641;
+  --fg: #e8ecf1;
+  --muted: #99a4b1;
+  --primary: #6f9fd8;
+  --primary-hover: #88b1e2;
+  --primary-soft: #21303f;
+  --success: #6fb886;
+  --success-soft: #1e2f25;
+  --danger: #d48484;
+  --danger-soft: #362224;
+  color-scheme: dark;
+}
+
+/* Map tokens to Tailwind color utilities: bg-surface, text-fg, border-border, ... */
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-hover: var(--surface-hover);
+  --color-border: var(--border);
+  --color-fg: var(--fg);
+  --color-muted: var(--muted);
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-primary-soft: var(--primary-soft);
+  --color-success: var(--success);
+  --color-success-soft: var(--success-soft);
+  --color-danger: var(--danger);
+  --color-danger-soft: var(--danger-soft);
+  --font-sans: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --shadow-card: 0 1px 3px rgba(28, 36, 48, 0.07), 0 4px 16px rgba(28, 36, 48, 0.05);
+}
+
+body {
+  @apply m-0 min-w-80 min-h-screen bg-bg text-fg font-sans text-base leading-relaxed antialiased;
+  transition: background-color 200ms ease, color 200ms ease;
+}

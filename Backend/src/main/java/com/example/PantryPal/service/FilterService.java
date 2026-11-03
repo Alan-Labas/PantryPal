@@ -18,7 +18,7 @@ public class FilterService {
 
         for (Zaloga zapis : zaloga) {
             if (zapis.getRokUporabe() != null
-                    && !zapis.getRokUporabe().isAfter(mejniDatum)) {
+                    && !zapis.getRokUporabe().isBefore(mejniDatum)) {
                 rezultati.add(zapis);
             }
         }

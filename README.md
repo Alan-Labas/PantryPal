@@ -35,6 +35,8 @@ Po zagonu se odpre glavni meni:
 
 - `1` – domača zaloga in filtriranje (naloga 1).
 - `2` – lokalni recepti in spletni parser (naloga 2).
+- `3` – odprti podatki in grafi (naloga 3).
+- `4` – AI asistent za recepte in zalogo – Google Gemini (naloga 4).
 - `0` – izhod.
 
 V podmeniju naloge 1 izberite:
@@ -102,3 +104,13 @@ mvn spring-boot:run
 
 Frontend ali spletni strežnik nista potrebna. Navodila:
 [README_NALOGA3.md](README_NALOGA3.md).
+
+## Naloga 4 – Integracija LLM (Google Gemini)
+
+V glavnem meniju izberite `4` za dinamično pridobivanje AI predlogov receptov iz
+Google Gemini API (`gemini-3.8-flash`). Prompt se sestavi dinamično iz vhodnih
+parametrov uporabnika (vrsta obroka, čas priprave, porcije, omejitve, poudarek),
+trenutnega datuma/časa ter dejanske domače zaloge živil z roki uporabe.
+Prejeti JSON odgovor se deserializira v Java razred `AiOdgovor` in shrani v
+`Backend/izhod/naloga4/ai-predlogi.json`. Navodila:
+[README_NALOGA4.md](README_NALOGA4.md).
