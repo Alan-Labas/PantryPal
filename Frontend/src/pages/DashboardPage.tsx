@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { BarChart3, BookOpen, PackageOpen, Sparkles } from 'lucide-react'
+import { BarChart3, BookOpen, Network, PackageOpen, Sparkles } from 'lucide-react'
 import { ThemeToggle } from '../components/ThemeToggle.tsx'
 import { cardClass } from '../components/ui.ts'
 
@@ -27,6 +27,12 @@ const sections = [
     title: 'AI Asistent (Google Gemini LLM)',
     text: 'Dinamično sestavljanje prompta iz obrazca, časa v brskalniku in domače zaloge ter deserializacija JSON odgovora v Java razred AiOdgovor.',
     to: '/ai-asistent',
+  },
+  {
+    icon: Network,
+    title: 'gRPC storitve & pretakanje (Naloga 5)',
+    text: 'Protocol Buffers binarna serializacija (pantrypal.proto), 1 gRPC storitev in 4 RPC klici (3 Unary + 1 Server-Side Streaming v realnem času).',
+    to: '/grpc',
   },
 ]
 

@@ -6,6 +6,7 @@ import { ZalogaPage } from './pages/ZalogaPage.tsx'
 import { ReceptiPage } from './pages/ReceptiPage.tsx'
 import { OdprtiPodatkiPage } from './pages/OdprtiPodatkiPage.tsx'
 import { AiAsistentPage } from './pages/AiAsistentPage.tsx'
+import { GrpcPage } from './pages/GrpcPage.tsx'
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
             <Route path="/recepti" element={<ReceptiPage />} />
             <Route path="/odprti-podatki" element={<OdprtiPodatkiPage />} />
             <Route path="/ai-asistent" element={<AiAsistentPage />} />
+            <Route path="/grpc" element={<GrpcPage />} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Route>
         </Routes>

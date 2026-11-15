@@ -1,6 +1,10 @@
 package com.example.PantryPal.controller;
 
+import com.example.PantryPal.grpc.PantryPalGrpcClientService;
+import com.example.PantryPal.grpc.PantryPalGrpcServerService;
+import com.example.PantryPal.grpc.generated.PantryPalProto.*;
 import com.example.PantryPal.llm.GeminiService;
+import io.grpc.stub.StreamObserver;
 import com.example.PantryPal.odprtipodatki.GrafService;
 import com.example.PantryPal.odprtipodatki.OdpadnaHranaService;
 import com.example.PantryPal.service.FilterService;
@@ -11,8 +15,10 @@ import com.example.PantryPal.vao.Trgovina;
 import com.example.PantryPal.vao.Zaloga;
 import com.example.PantryPal.vao.Zivilo;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.mvc.method.annotation.SseEmitter;
 import tools.jackson.databind.JsonNode;
 import tools.jackson.databind.json.JsonMapper;
 
@@ -44,6 +50,8 @@ public class PantryPalApiController {
     private final OdpadnaHranaService odpadnaHranaService;
     private final GrafService grafService;
     private final GeminiService geminiService;
+    private final PantryPalGrpcClientService grpcClientService;
+    private final PantryPalGrpcServerService grpcServerService;
     private final JsonMapper mapper = JsonMapper.builder().build();
 
     public PantryPalApiController(
@@ -53,7 +61,9 @@ public class PantryPalApiController {
             ReceptParserService receptParserService,
             OdpadnaHranaService odpadnaHranaService,
             GrafService grafService,
-            GeminiService geminiService
+            GeminiService geminiService,
+            PantryPalGrpcClientService grpcClientService,
+            PantryPalGrpcServerService grpcServerService
     ) {
         this.xmlService = xmlService;
         this.filterService = filterService;
@@ -62,7 +72,15 @@ public class PantryPalApiController {
         this.odpadnaHranaService = odpadnaHranaService;
         this.grafService = grafService;
         this.geminiService = geminiService;
+        this.grpcClientService = grpcClientService;
+        this.grpcServerService = grpcServerService;
     }
+
+    public record GrpcKolicinaZahteva(
+            String zapisId,
+            Double spremembaKolicine,
+            String referencniDatum
+    ) {}
 
     public record LlmObrazecZahteva(
             String vrstaObroka,
@@ -315,5 +333,122 @@ public class PantryPalApiController {
             deli.add("jezik=" + t.jezikBrskalnika().trim());
         }
         return String.join(", ", deli);
+    }
+
+    // ==================== NALOGA 5: gRPC storitve in pretakanje ====================
+
+    @GetMapping("/grpc/proto")
+    public ResponseEntity<?> pridobiProtoDatoteko() {
+        try {
+            Path protoPot = Path.of("src", "main", "proto", "pantrypal.proto");
+            if (!Files.exists(protoPot)) {
+                protoPot = Path.of("Backend", "src", "main", "proto", "pantrypal.proto");
+            }
+            String vsebina = Files.exists(protoPot)
+                    ? Files.readString(protoPot, StandardCharsets.UTF_8)
+                    : "// pantrypal.proto ni najden";
+            return ResponseEntity.ok(Map.of(
+                    "imeDatoteke", "pantrypal.proto",
+                    "grpcPort", grpcServerService.pridobiPort(),
+                    "vsebina", vsebina
+            ));
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
+                    .body(Map.of("napaka", "Branje .proto datoteke ni uspelo: " + e.getMessage()));
+        }
+    }
+
+    @GetMapping("/grpc/kategorija")
+    public ResponseEntity<?> grpcZalogaPoKategoriji(
+            @RequestParam(required = false) String kategorija,
+            @RequestParam(required = false) String referencniDatum
+    ) {
+        try {
+            SeznamZalogeOdgovor rezultat =
+                    grpcClientService.pridobiZalogoPoKategoriji(kategorija, referencniDatum);
+            return ResponseEntity.ok(rezultat);
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.BAD_GATEWAY)
+                    .body(Map.of("napaka", "gRPC klic PridobiZalogoPoKategoriji ni uspel: " + e.getMessage()));
+        }
+    }
+
+    @GetMapping("/grpc/statistika")
+    public ResponseEntity<?> grpcStatistikaZaloge(
+            @RequestParam(required = false) String referencniDatum,
+            @RequestParam(defaultValue = "7") int pragDni
+    ) {
+        try {
+            StatistikaOdgovor rezultat =
+                    grpcClientService.izracunajStatistikoZaloge(referencniDatum, pragDni);
+            return ResponseEntity.ok(rezultat);
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.BAD_GATEWAY)
+                    .body(Map.of("napaka", "gRPC klic IzracunajStatistikoZaloge ni uspel: " + e.getMessage()));
+        }
+    }
+
+    @PostMapping("/grpc/kolicina")
+    public ResponseEntity<?> grpcPosodobiKolicino(@RequestBody GrpcKolicinaZahteva zahteva) {
+        if (zahteva == null || zahteva.zapisId() == null || zahteva.zapisId().isBlank()) {
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST)
+                    .body(Map.of("napaka", "Manjka ID zapisa zaloge (npr. z-1)."));
+        }
+        double sprememba = zahteva.spremembaKolicine() == null ? 0.0 : zahteva.spremembaKolicine();
+        try {
+            PostavkaZalogeMsg rezultat = grpcClientService.posodobiKolicino(
+                    zahteva.zapisId().trim(),
+                    sprememba,
+                    zahteva.referencniDatum()
+            );
+            return ResponseEntity.ok(rezultat);
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.BAD_GATEWAY)
+                    .body(Map.of("napaka", "gRPC klic PosodobiKolicino ni uspel: " + e.getMessage()));
+        }
+    }
+
+    @GetMapping(value = "/grpc/stream", produces = MediaType.TEXT_EVENT_STREAM_VALUE)
+    public SseEmitter grpcSpremljajKriticnoZalogoStream(
+            @RequestParam(required = false) String referencniDatum,
+            @RequestParam(defaultValue = "350") int zakasnitevMs,
+            @RequestParam(defaultValue = "false") boolean samoKriticni
+    ) {
+        SseEmitter emitter = new SseEmitter(60_000L);
+        grpcClientService.spremljajKriticnoZalogoStreamAsync(
+                referencniDatum,
+                zakasnitevMs,
+                samoKriticni,
+                new StreamObserver<>() {
+                    @Override
+                    public void onNext(KriticnaPostavkaDogodek dogodek) {
+                        try {
+                            emitter.send(SseEmitter.event()
+                                    .name("kriticna-postavka")
+                                    .data(dogodek));
+                        } catch (IOException e) {
+                            emitter.completeWithError(e);
+                        }
+                    }
+
+                    @Override
+                    public void onError(Throwable t) {
+                        emitter.completeWithError(t);
+                    }
+
+                    @Override
+                    public void onCompleted() {
+                        try {
+                            emitter.send(SseEmitter.event()
+                                    .name("konec")
+                                    .data(Map.of("status", "ZAKLJUCENO")));
+                            emitter.complete();
+                        } catch (IOException ignored) {
+                            emitter.complete();
+                        }
+                    }
+                }
+        );
+        return emitter;
     }
 }

@@ -1,5 +1,6 @@
 package com.example.PantryPal.service;
 
+import com.example.PantryPal.grpc.GrpcKonzola;
 import com.example.PantryPal.llm.LlmKonzola;
 import com.example.PantryPal.odprtipodatki.OdprtiPodatkiKonzola;
 import com.example.PantryPal.vao.Trgovina;
@@ -21,6 +22,7 @@ import java.util.*;
 public class KonzolaService {
     private final OdprtiPodatkiKonzola odprtiPodatki;
     private final LlmKonzola llmKonzola;
+    private final GrpcKonzola grpcKonzola;
     private final XmlService xmlService;
     private final IzvozService izvozService;
     private final FilterService filterService;
@@ -28,15 +30,22 @@ public class KonzolaService {
 
     public KonzolaService(XmlService xmlService, IzvozService izvozService,
                           FilterService filterService, ReceptParserService receptParserService, OdprtiPodatkiKonzola odprtiPodatki) {
-        this(xmlService, izvozService, filterService, receptParserService, odprtiPodatki, null);
+        this(xmlService, izvozService, filterService, receptParserService, odprtiPodatki, null, null);
+    }
+
+    public KonzolaService(XmlService xmlService, IzvozService izvozService,
+                          FilterService filterService, ReceptParserService receptParserService,
+                          OdprtiPodatkiKonzola odprtiPodatki, LlmKonzola llmKonzola) {
+        this(xmlService, izvozService, filterService, receptParserService, odprtiPodatki, llmKonzola, null);
     }
 
     @Autowired
     public KonzolaService(XmlService xmlService, IzvozService izvozService,
                           FilterService filterService, ReceptParserService receptParserService,
-                          OdprtiPodatkiKonzola odprtiPodatki, LlmKonzola llmKonzola) {
+                          OdprtiPodatkiKonzola odprtiPodatki, LlmKonzola llmKonzola, GrpcKonzola grpcKonzola) {
         this.odprtiPodatki = odprtiPodatki;
         this.llmKonzola = llmKonzola;
+        this.grpcKonzola = grpcKonzola;
         this.xmlService = xmlService;
         this.izvozService = izvozService;
         this.filterService = filterService;
@@ -52,6 +61,7 @@ public class KonzolaService {
                     2 – Recepti in spletni parser (naloga 2)
                     3 – Odprti podatki in grafi (naloga 3)
                     4 – AI asistent za recepte in zalogo – Google Gemini (naloga 4)
+                    5 – gRPC storitve in pretakanje v realnem času (naloga 5)
                     0 – Izhod
                     """);
             System.out.print("Izberi možnost: ");
@@ -63,11 +73,14 @@ public class KonzolaService {
                 case "4" -> {
                     if (llmKonzola != null) llmKonzola.zagon(sc);
                 }
+                case "5" -> {
+                    if (grpcKonzola != null) grpcKonzola.zagon(sc);
+                }
                 case "0" -> {
                     System.out.println("Nasvidenje!");
                     return;
                 }
-                default -> System.out.println("Neveljavna izbira. Izberi 0, 1, 2, 3 ali 4.");
+                default -> System.out.println("Neveljavna izbira. Izberi 0, 1, 2, 3, 4 ali 5.");
             }
         }
     }

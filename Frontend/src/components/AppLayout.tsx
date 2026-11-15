@@ -4,6 +4,7 @@ import {
   BookOpen,
   Home,
   LayoutDashboard,
+  Network,
   PackageOpen,
   Sparkles,
 } from 'lucide-react'
@@ -15,6 +16,7 @@ const navItems = [
   { to: '/recepti', label: 'Recepti', icon: BookOpen, end: false },
   { to: '/odprti-podatki', label: 'Odprti podatki', icon: BarChart3, end: false },
   { to: '/ai-asistent', label: 'AI Asistent', icon: Sparkles, end: false },
+  { to: '/grpc', label: 'gRPC storitve', icon: Network, end: false },
 ]
 
 const linkClasses = ({ isActive }: { isActive: boolean }) =>
@@ -38,9 +40,6 @@ export function AppLayout() {
         <nav aria-label="Main navigation" className="flex flex-1 flex-col gap-1">
           {links}
         </nav>
-        <div className="border-t border-border px-3 pt-3 text-xs text-muted">
-          TIDS – Vaje (Naloge 1–4)
-        </div>
       </aside>
 
       <main className="mx-auto w-full max-w-5xl flex-1 px-5 pb-22 pt-6 md:p-8">

@@ -1,4 +1,19 @@
 # macOS folder metadata
 .DS_Store
+
+# Skrivni API ključi
 .env
+.env.*
 Backend/.env
+Frontend/.env
+
+# Odvisnosti in gradnja
+node_modules/
+Frontend/node_modules/
+Frontend/dist/
+Backend/target/
+
+# Nastavitve IDE
+.idea/
+Backend/.idea/
+Frontend/.idea/

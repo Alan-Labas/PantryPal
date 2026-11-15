@@ -37,6 +37,7 @@ Po zagonu se odpre glavni meni:
 - `2` – lokalni recepti in spletni parser (naloga 2).
 - `3` – odprti podatki in grafi (naloga 3).
 - `4` – AI asistent za recepte in zalogo – Google Gemini (naloga 4).
+- `5` – gRPC storitve in pretakanje v realnem času (naloga 5).
 - `0` – izhod.
 
 V podmeniju naloge 1 izberite:
@@ -114,3 +115,11 @@ trenutnega datuma/časa ter dejanske domače zaloge živil z roki uporabe.
 Prejeti JSON odgovor se deserializira v Java razred `AiOdgovor` in shrani v
 `Backend/izhod/naloga4/ai-predlogi.json`. Navodila:
 [README_NALOGA4.md](README_NALOGA4.md).
+
+## Naloga 5 – gRPC in Protocol Buffers
+
+V glavnem meniju izberite `5` ali v spletnem vmesniku odprite zavihek **gRPC storitve** (`/grpc`).
+Implementirana je `.proto` shema (`Backend/src/main/proto/pantrypal.proto`) s storitvijo
+`PantryPalGrpcService` in 4 RPC klici (`PridobiZalogoPoKategoriji`, `IzracunajStatistikoZaloge`,
+`PosodobiKolicino` ter strežniškim tokom v realnem času `SpremljajKriticnoZalogoStream`).
+Navodila: [README_NALOGA5.md](README_NALOGA5.md).

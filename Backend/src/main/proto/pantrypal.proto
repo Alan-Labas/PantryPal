@@ -1,0 +1,91 @@
+syntax = "proto3";
+
+option java_multiple_files = false;
+option java_package = "com.example.PantryPal.grpc.generated";
+option java_outer_classname = "PantryPalProto";
+
+package pantrypal;
+
+// Storitev gRPC za Nalogo 5: upravljanje, analitika in sprotno pretakanje podatkov zaloge živil
+service PantryPalGrpcService {
+  // 1. Preprost (Unary) RPC: pridobivanje in filtriranje zaloge po kategoriji živila
+  rpc PridobiZalogoPoKategoriji (KategorijaZahtevek) returns (SeznamZalogeOdgovor) {}
+
+  // 2. Preprost (Unary) RPC: obdelava in agregacija statistike rokov uporabe glede na mejne dni
+  rpc IzracunajStatistikoZaloge (StatistikaZahtevek) returns (StatistikaOdgovor) {}
+
+  // 3. Preprost (Unary) RPC: posodobitev količine posameznega zapisa zaloge
+  rpc PosodobiKolicino (PosodobiKolicinoZahtevek) returns (PostavkaZalogeMsg) {}
+
+  // 4. Server-Side Streaming RPC: sprotno pretakanje (stream) opozoril o rokih uporabe v realnem času
+  rpc SpremljajKriticnoZalogoStream (StreamZahtevek) returns (stream KriticnaPostavkaDogodek) {}
+}
+
+// Glavno podatkovno sporočilo za zapis zaloge živila
+message PostavkaZalogeMsg {
+  string id = 1;
+  string zivilo_id = 2;
+  string ime_zivila = 3;
+  string kategorija = 4;
+  double kolicina = 5;
+  string enota = 6;
+  string trgovina = 7;
+  string kraj = 8;
+  string datum_nakupa = 9;
+  string rok_uporabe = 10;
+  int32 dni_do_poteka = 11;
+  bool je_poteklo = 12;
+}
+
+// 1. Zahtevek in odgovor za filtriranje po kategoriji
+message KategorijaZahtevek {
+  string kategorija = 1;
+  string referencni_datum = 2;
+}
+
+message SeznamZalogeOdgovor {
+  string izbrana_kategorija = 1;
+  int32 skupaj_zapisov = 2;
+  repeated PostavkaZalogeMsg postavke = 3;
+}
+
+// 2. Zahtevek in odgovor za izračun statistike zaloge
+message StatistikaZahtevek {
+  string referencni_datum = 1;
+  int32 prag_dni_opozorila = 2;
+}
+
+message StatistikaOdgovor {
+  string referencni_datum = 1;
+  int32 prag_dni_opozorila = 2;
+  int32 skupaj_zapisov = 3;
+  int32 poteklih_zapisov = 4;
+  int32 kmalu_potece_zapisov = 5;
+  int32 varnih_zapisov = 6;
+  int32 brez_roka_zapisov = 7;
+  double delez_kriticnih_odstotek = 8;
+  repeated string razpolozljive_kategorije = 9;
+}
+
+// 3. Zahtevek za posodobitev količine v zalogi
+message PosodobiKolicinoZahtevek {
+  string zapis_id = 1;
+  double sprememba_kolicine = 2;
+  string referencni_datum = 3;
+}
+
+// 4. Zahtevek in dogodek za strežniški tok (Server-Side Streaming RPC)
+message StreamZahtevek {
+  string referencni_datum = 1;
+  int32 zakasnitev_ms = 2;
+  bool samo_kriticni = 3;
+}
+
+message KriticnaPostavkaDogodek {
+  int32 zaporedna_stevilka = 1;
+  int32 skupaj_v_toku = 2;
+  string nujnost = 3;
+  string priporocilo = 4;
+  string cas_oddaje = 5;
+  PostavkaZalogeMsg postavka = 6;
+}
